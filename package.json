@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "clean:output": "rimraf dist",
+    "start": "npm run clean:output && parcel src/index.html",
+     "build": "npm run clean:output && parcel build src/index.html",
   },
   "dependencies": {
     "detect-gpu": "4.0.23",
@@ -15,7 +16,8 @@
   },
   "devDependencies": {
     "@babel/core": "7.2.0",
-    "parcel-bundler": "^1.6.1"
+    "parcel-bundler": "^1.6.1",
+    "rimraf": "^3.0.2"
   },
   "keywords": []
 }
