@@ -48,8 +48,8 @@ function createLights() {
 
 function createMeshes() {
     const textureLoader = new THREE.TextureLoader();
-	debugger
-    const texture = textureLoader.load("./src/uv_test_bw_1024.png");
+	// debugger
+    const texture = textureLoader.load("https://res.cloudinary.com/picturecloud7/image/upload/v1653799071/test-image.png");
     texture.encoding = THREE.sRGBEncoding;
 
     const geometry = new THREE.BoxBufferGeometry(2, 2, 2);
