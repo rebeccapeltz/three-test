@@ -48,6 +48,7 @@ function createLights() {
 
 function createMeshes() {
     const textureLoader = new THREE.TextureLoader();
+	debugger
     const texture = textureLoader.load("./src/uv_test_bw_1024.png");
     texture.encoding = THREE.sRGBEncoding;
 

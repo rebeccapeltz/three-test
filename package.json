@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
+  "license": "MIT",
   "scripts": {
-    "clean:output": "rimraf dist",
-    "start": "npm run clean:output && parcel src/index.html",
-     "build": "npm run clean:output && parcel build src/index.html",
-  },
+    "clean": "rm ./dist/* -Recurse -Force",
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  }, 
   "dependencies": {
     "detect-gpu": "4.0.23",
     "jsm": "^0.0.1",
@@ -16,8 +17,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.2.0",
-    "parcel-bundler": "^1.6.1",
-    "rimraf": "^3.0.2"
+    "parcel-bundler": "^1.6.1"
   },
   "keywords": []
 }

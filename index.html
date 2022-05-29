@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>THREE.js</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./src/styles.css" />
-  </head>
 
-  <body>
-    <script src="./src/three.js"></script>
+<head>
+  <title>THREE.js</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
 
-    <div class="container">
-      <button id="download-glb">Download GLB</button>
+<body>
+  <script type="module" src="./src/three.js"></script>
+
+  <div class="container">
+    <div><button id="download-glb">Download GLB</button></div>
+    <div class="obj-container">
+      <div id="scene-container"></div>
     </div>
-    <div id="scene-container"></div>
-    <script src="src/index.js"></script>
-    <!-- https://www.youtube.com/watch?v=tD0NYabdf5Q -->
-  </body>
+  </div>
+
+  <script src="src/index.js"></script>
+</body>
+
 </html>
