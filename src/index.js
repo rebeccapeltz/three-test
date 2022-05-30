@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-
+import { GLTFExporter } from "three/examples/jsm/exporters/GLTFExporter.js";
 import { OrbitControls } from './jsm/controls/OrbitControls.js';
 
 
@@ -48,8 +48,8 @@ function createLights() {
 
 function createMeshes() {
     const textureLoader = new THREE.TextureLoader();
-	// debugger
-    const texture = textureLoader.load("https://res.cloudinary.com/picturecloud7/image/upload/v1653799071/test-image.png");
+    // debugger
+    const texture = textureLoader.load("https://res.cloudinary.com/picturecloud7/image/upload/v1648182154/saddle-rock-columbia-river_vzx2br.avif");
     texture.encoding = THREE.sRGBEncoding;
 
     const geometry = new THREE.BoxBufferGeometry(2, 2, 2);
@@ -72,9 +72,9 @@ function createControls() {
 }
 
 function update() {
-    // mesh.rotation.x += 0.01;
-    // mesh.rotation.y += 0.01;
-    // mesh.rotation.z += 0.01;
+    mesh.rotation.x += 0.01;
+    mesh.rotation.y += 0.01;
+    mesh.rotation.z += 0.01;
 }
 
 function render() {
@@ -92,3 +92,28 @@ function onWindowResize() {
     renderer.setSize(container.clientWidth, container.clientHeight);
 }
 window.addEventListener("resize", onWindowResize, false);
+
+// download
+
+function download() {
+    const exporter = new GLTFExporter();
+    exporter.parse(
+        scene,
+        function (result) {
+            saveArrayBuffer(result, "cube.glb");
+        },
+        { binary: true }
+    );
+}
+function saveArrayBuffer(buffer, filename) {
+    save(new Blob([buffer], { type: "application/octet-stream" }), filename);
+}
+const link = document.createElement("a");
+document.body.appendChild(link);
+
+function save(blob, fileName) {
+    link.href = URL.createObjectURL(blob);
+    link.download = fileName;
+    link.click();
+}
+document.getElementById("download-glb").addEventListener("click", download);
