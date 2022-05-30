@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { GLTFExporter } from "three/examples/jsm/exporters/GLTFExporter.js";
+import { GLTFExporter } from "./jsm/exporters/GLTFExporter.js";
 import { OrbitControls } from './jsm/controls/OrbitControls.js';
 
 

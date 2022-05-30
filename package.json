@@ -5,7 +5,7 @@
   "main": "index.html",
   "license": "MIT",
   "scripts": {
-    "clean": "rm ./dist/* -Recurse -Force",
+    "clean": "rm -rf dist && rm -rf .cache",
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
   }, 
