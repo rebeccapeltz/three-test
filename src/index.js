@@ -3,6 +3,7 @@ import { GLTFExporter } from "./jsm/exporters/GLTFExporter.js";
 import { OrbitControls } from './jsm/controls/OrbitControls.js';
 const URL1 = "https://res.cloudinary.com/picturecloud7/image/upload/h_1024,w_1024,c_limit,f_auto,q_auto:best/saddle-rock";
 const URL2 = "https://res.cloudinary.com/picturecloud7/image/upload/h_1024,w_1024,c_limit,f_auto,q_auto:best/sr-2-kids";
+const URL3 = "https://res.cloudinary.com/picturecloud7/image/upload/w_1024,h_1024,c_limit,f_auto,q_auto:best/jim-mission-ridge";
 
 let container;
 let camera;
@@ -52,7 +53,7 @@ function createMeshes() {
     // debugger
 
     var material = [
-        URL1, URL1, URL1, URL2, URL2, URL2
+        URL1, URL1, URL2, URL2, URL3, URL3
     ].map(pic => {
         let texture = textureLoader.load(pic)
         texture.encoding = THREE.sRGBEncoding;
@@ -83,9 +84,9 @@ function createControls() {
 }
 
 function update() {
-    // mesh.rotation.x += 0.01;
-    // mesh.rotation.y += 0.01;
-    // mesh.rotation.z += 0.01;
+//     mesh.rotation.x += 0.01;
+//     mesh.rotation.y += 0.01;
+//     mesh.rotation.z += 0.01;
 }
 
 function render() {
