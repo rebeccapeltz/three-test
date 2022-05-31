@@ -49,7 +49,7 @@ function createLights() {
 function createMeshes() {
     const textureLoader = new THREE.TextureLoader();
     // debugger
-    const texture = textureLoader.load("https://res.cloudinary.com/picturecloud7/image/upload/v1648182154/saddle-rock-columbia-river_vzx2br.avif");
+    const texture = textureLoader.load("https://res.cloudinary.com/picturecloud7/image/upload/h_1024,w_1024,c_limit/saddle-rock-columbia-river_vzx2br.avif");
     texture.encoding = THREE.sRGBEncoding;
 
     const geometry = new THREE.BoxBufferGeometry(2, 2, 2);
