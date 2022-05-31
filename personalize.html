@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>THREE.js</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+
+<body>
+  <script type="module" src="./src/three.js"></script>
+
+  <div class="container">
+    <div><button id="download-glb">Download GLB</button></div>
+    <div>
+      <form>
+        <input type="text" id="url1" name="url1" size="100" value="" placeholder="https://res.cloudinary.com/..."><br>
+        <input type="text" id="url2" name="url2" size="100" value="" placeholder="https://res.cloudinary.com/..."><br>
+        <input type="text" id="url3" name="url3" size="100" value="" placeholder="https://res.cloudinary.com/..."><br>
+        <input type="text" id="url4" name="url4" size="100" value="" placeholder="https://res.cloudinary.com/..."><br>
+        <input type="text" id="url5" name="url5" size="100" value="" placeholder="https://res.cloudinary.com/..."><br>
+        <input type="text" id="url6" name="url6" size="100" value="" placeholder="https://res.cloudinary.com/..."><br>
+        <input type="submit" value="Submit">
+      </form> 
+
+    </div>
+    <div class="obj-container">
+      <div id="scene-container"></div>
+    </div>
+  </div>
+
+  <script src="src/index.js"></script>
+</body>
+
+</html>
