@@ -1,9 +1,12 @@
 import * as THREE from 'three';
 import { GLTFExporter } from "./jsm/exporters/GLTFExporter.js";
 import { OrbitControls } from './jsm/controls/OrbitControls.js';
-const URL1 = "https://res.cloudinary.com/picturecloud7/image/upload/h_1024,w_1024,c_fill,g_auto,f_auto,q_auto:best/saddle-rock";
-const URL2 = "https://res.cloudinary.com/picturecloud7/image/upload/h_1024,w_1024,c_fill,g_auto,f_auto,q_auto:best/sr-2-kids";
-const URL3 = "https://res.cloudinary.com/picturecloud7/image/upload/w_1024,h_1024,c_fill,g_auto,f_auto,q_auto:best/jim-mission-ridge";
+const URL1 = "https://res.cloudinary.com/molip/image/upload/l_text:Arial_48_bold:Sue,co_rgb:B90FAE,g_south,h_1024,w_1024,c_limit,f_auto,q_auto:best/hackerthon_2022/dating/woman1";
+const URL2 = "https://res.cloudinary.com/molip/image/upload/l_text:Arial_48_bold:Mary,co_rgb:B90FAE,g_south,h_1024,w_1024,c_limit,f_auto,q_auto:best/hackerthon_2022/dating/woman2";
+const URL3 = "https://res.cloudinary.com/molip/image/upload/l_text:Arial_48_bold:Cindy,co_rgb:B90FAE,g_south,h_1024,w_1024,c_limit,f_auto,q_auto:best/hackerthon_2022/dating/woman3";
+const URL4 = "https://res.cloudinary.com/molip/image/upload/l_text:Arial_48_bold:Betsy,co_rgb:B90FAE,g_south,h_1024,w_1024,c_limit,f_auto,q_auto:best/hackerthon_2022/dating/woman4";
+const URL5 = "https://res.cloudinary.com/molip/image/upload/l_text:Arial_48_bold:Daisy,co_rgb:B90FAE,g_south,h_1024,w_1024,c_limit,f_auto,q_auto:best/hackerthon_2022/dating/woman6";
+const URL6 = "https://res.cloudinary.com/molip/image/upload/l_text:Arial_48_bold:Ruby,co_rgb:B90FAE,g_south,h_1024,w_1024,c_limit,f_auto,q_auto:best/hackerthon_2022/dating/woman5";
 
 let container;
 let camera;
@@ -53,7 +56,7 @@ function createMeshes() {
     // debugger
 
     var material = [
-        URL1, URL1, URL2, URL2, URL3, URL3
+        URL1, URL2, URL3, URL4, URL5, URL6
     ].map(pic => {
         let texture = textureLoader.load(pic)
         texture.encoding = THREE.sRGBEncoding;
@@ -61,11 +64,9 @@ function createMeshes() {
         return new THREE.MeshLambertMaterial({ map: texture });
         return new THREE.MeshLambertMaterial({map: textureLoader.load(pic).encoding=THREE.sRGBEncoding});
     });
-    // const texture = textureLoader.load("https://res.cloudinary.com/picturecloud7/image/upload/h_1024,w_1024,c_limit,f_auto,q_auto:best/saddle-rock-columbia-river_vzx2br");
-    // texture.encoding = THREE.sRGBEncoding;
+   
 
     const geometry = new THREE.BoxBufferGeometry(3, 3, 3);
-    // const material = new THREE.MeshStandardMaterial({ map: texture });
     mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 }

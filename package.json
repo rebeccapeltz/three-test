@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist && rm -rf .cache",
-    "start": "parcel index.html personalize.html --open",
-    "build": "parcel build index.html personalize.html"
+    "start": "parcel ./*.html",
+    "build": "parcel build index.html personalize.html travel.html"
   }, 
   "dependencies": {
     "detect-gpu": "4.0.23",

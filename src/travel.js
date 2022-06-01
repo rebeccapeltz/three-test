@@ -1,9 +1,12 @@
 import * as THREE from 'three';
 import { GLTFExporter } from "./jsm/exporters/GLTFExporter.js";
 import { OrbitControls } from './jsm/controls/OrbitControls.js';
-const URL1 = "https://res.cloudinary.com/picturecloud7/image/upload/h_1024,w_1024,c_fill,g_auto,f_auto,q_auto:best/saddle-rock";
-const URL2 = "https://res.cloudinary.com/picturecloud7/image/upload/h_1024,w_1024,c_fill,g_auto,f_auto,q_auto:best/sr-2-kids";
-const URL3 = "https://res.cloudinary.com/picturecloud7/image/upload/w_1024,h_1024,c_fill,g_auto,f_auto,q_auto:best/jim-mission-ridge";
+const URL1 = "https://res.cloudinary.com/molip/image/upload/y_60,l_text:Arial_70_bold:Valentia:CITY,co_rgb:B90FAE,g_south,h_1024,w_1024,c_limit,f_auto,q_auto:best/hackerthon_2022/travel/city";
+const URL2 = "https://res.cloudinary.com/molip/image/upload/y_60,l_text:Arial_70_bold:Valentia:STREET,co_rgb:B90FAE,g_south,h_1024,w_1024,c_limit,f_auto,q_auto:best/hackerthon_2022/travel/street";
+const URL3 = "https://res.cloudinary.com/molip/image/upload/y_60,l_text:Arial_70_bold:Valentia:MUSEUM,co_rgb:B90FAE,g_south,h_1024,w_1024,c_limit,f_auto,q_auto:best/hackerthon_2022/travel/museum";
+const URL4 = "https://res.cloudinary.com/molip/image/upload/y_60,l_text:Arial_70_bold:Valentia:HARBOR,co_rgb:B90FAE,g_south,h_1024,w_1024,c_limit,f_auto,q_auto:best/hackerthon_2022/travel/harbor";
+const URL5 = "https://res.cloudinary.com/molip/image/upload/y_60,l_text:Arial_70_bold:Valentia:MARKET,co_rgb:B90FAE,g_south,h_1024,w_1024,c_limit,f_auto,q_auto:best/hackerthon_2022/travel/market";
+const URL6 = "https://res.cloudinary.com/molip/image/upload/y_60,l_text:Arial_70_bold:Valentia:OLD_DOOR,co_rgb:B90FAE,g_south,h_1024,w_1024,c_limit,f_auto,q_auto:best/hackerthon_2022/travel/old_door";
 
 let container;
 let camera;
@@ -53,7 +56,7 @@ function createMeshes() {
     // debugger
 
     var material = [
-        URL1, URL1, URL2, URL2, URL3, URL3
+        URL1, URL2, URL3, URL4, URL5, URL6
     ].map(pic => {
         let texture = textureLoader.load(pic)
         texture.encoding = THREE.sRGBEncoding;
