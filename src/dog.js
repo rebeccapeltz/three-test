@@ -15,7 +15,7 @@ let scene;
 let mesh;
 let controls;
 let light;
-let light2;
+
 
 function init() {
     container = document.querySelector("#scene-container");
@@ -46,11 +46,6 @@ function createCamera() {
 }
 
 function createLights() {
-    const mainLight = new THREE.DirectionalLight(0xffffff, 5);
-    mainLight.position.set(10, 10, 10);
-
-    const hemisphereLight = new THREE.HemisphereLight(0xddeeff, 0x202020, 5);
-    scene.add(mainLight, hemisphereLight);
     light = new THREE.PointLight( 0xffffff, 5 );
     light.position.set( -2,2,10 );
     const light2 = new THREE.AmbientLight( 0xffffff,0.3 ); // soft white light
