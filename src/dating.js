@@ -14,6 +14,8 @@ let renderer;
 let scene;
 let mesh;
 let controls;
+let light;
+let light2;
 
 function init() {
     container = document.querySelector("#scene-container");
@@ -49,6 +51,10 @@ function createLights() {
 
     const hemisphereLight = new THREE.HemisphereLight(0xddeeff, 0x202020, 5);
     scene.add(mainLight, hemisphereLight);
+    light = new THREE.PointLight( 0xffffff, 5 );
+    light.position.set( -2,2,10 );
+    const light2 = new THREE.AmbientLight( 0xffffff,0.3 ); // soft white light
+    scene.add( light,light2 );
 }
 
 function createMeshes() {
@@ -62,7 +68,6 @@ function createMeshes() {
         texture.encoding = THREE.sRGBEncoding;
         // debugger
         return new THREE.MeshLambertMaterial({ map: texture });
-        return new THREE.MeshLambertMaterial({map: textureLoader.load(pic).encoding=THREE.sRGBEncoding});
     });
    
 
@@ -88,6 +93,7 @@ function update() {
     mesh.rotation.x += 0.003;
     mesh.rotation.y += 0.003;
     mesh.rotation.z += 0.003;
+    light.position.copy(camera.position);
 }
 
 function render() {
