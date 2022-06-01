@@ -58,10 +58,10 @@ function createCamera() {
 }
 
 function createLights() {
-  light = new THREE.PointLight( 0xffffff, 3 );
+  light = new THREE.PointLight( 0xffffff, 5 );
   light.position.set( -2,2,10 );
   const light2 = new THREE.AmbientLight( 0xffffff,0.3 ); // soft white light
-  scene.add(light2 );
+  scene.add( light,light2 );
 }
 
 function createMeshes() {
@@ -94,9 +94,9 @@ function createControls() {
 }
 
 function update() {
-  mesh.rotation.x += 0.01;
-  mesh.rotation.y += 0.01;
-  mesh.rotation.z += 0.01;
+  mesh.rotation.x += 0.003;
+  mesh.rotation.y += 0.003;
+  mesh.rotation.z += 0.003;
   light.position.copy(camera.position);
 }
 
