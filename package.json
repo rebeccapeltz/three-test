@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rm -rf dist && rm -rf .cache",
     "start": "parcel ./*.html",
-    "build": "parcel build index.html personalize.html travel.html"
+    "build": "parcel build ./*.html"
   }, 
   "dependencies": {
     "detect-gpu": "4.0.23",
